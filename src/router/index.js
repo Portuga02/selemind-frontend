@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import TesteView from '../views/TesteView.vue';
+import PacienteView from '@/views/PacienteView.vue';
 
 const routes = [
-  { path: '/teste', component: TesteView }
+  { path: '/', component: PacienteView }
+  {path: '/pacientes',component:PacienteView}
 ];
 
 const router = createRouter({
