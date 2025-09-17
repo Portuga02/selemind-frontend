@@ -1,0 +1,11 @@
+{
+    "name": "vendor/selemind-frontend",
+    "description": "Description of project selemind-frontend.",
+    "authors": [
+        {
+            "name": "savio",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {}
+}
