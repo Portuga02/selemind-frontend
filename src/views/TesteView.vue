@@ -1,22 +1,26 @@
 <template>
-     <div class="container mt-5">
-        <h1>Testando API Laravel</h1>
-        <p>{{ mensagem }}</p>
-    </div>
+  <div class="container mt-5">
+    <h1>Teste de Conexão</h1>
+    <p>{{ status }}</p>
+  </div>
 </template>
 
 <script>
 import api from '../services/api';
 
 export default {
-    data() {
-        return {
-            mensagem: ''
-        };
-    },
-    async mounted() {
-        const resposta = await api.get('/teste');
-        this.mensagem = resposta.data.mensagem;
+  data() {
+    return {
+      status: ''
+    };
+  },
+  async mounted() {
+    try {
+      const resposta = await api.get('/ping');
+      this.status = resposta.data.status;
+    } catch (erro) {
+      this.status = 'Erro ao conectar com Laravel';
     }
+  }
 };
 </script>
