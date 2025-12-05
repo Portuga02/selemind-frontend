@@ -9,6 +9,9 @@ const routes = [
   { path: '/usuarios', component: TesteView },
   { path: '/sobrenos', component: TesteView },
   { path: '/administradores', component: TesteView },
+  { path: '/ping', component: TesteView }  { path: '/usuarios', component: TesteView },
+  { path: '/sobrenos', component: TesteView },
+  { path: '/administradores', component: TesteView },
   { path: '/ping', component: TesteView }
 ];
 
