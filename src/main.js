@@ -1,13 +1,19 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router/index.js';
-
+import router from './router'; 
+import { createPinia } from 'pinia';
+import { useAuthStore } from './stores/auth'; 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css';
 
-import * as BootstrapVueNext from 'bootstrap-vue-next'; // Importação correta
-
 const app = createApp(App);
+const pinia = createPinia(); 
+
+app.use(pinia); 
+
+const authStore = useAuthStore();
+authStore.initializeStore(); 
+
 app.use(router);
-app.use(BootstrapVueNext); // Corrigindo importação
+
 app.mount('#app');
