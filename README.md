@@ -26,4 +26,8 @@ npm run dev
 
 ```sh
 npm run build
+
+
+
+npm install vue bootstrap@4 bootstrap-vue
 ```
